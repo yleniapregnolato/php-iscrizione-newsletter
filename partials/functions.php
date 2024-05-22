@@ -7,7 +7,8 @@ if (isset($_POST["emails"])) {
     if (str_contains($user_email, '.') && str_contains($user_email, '@')) {
         $valid = "Email valida";
         // salvo la chiave nella sessione dell'utente
-        $_SESSION["correct"] = true;
+        session_start();
+        $_SESSION["correct"] = $user_email;
         header('Location: ./thankyou.php');
     } else {
         $error = "Email non valida";
