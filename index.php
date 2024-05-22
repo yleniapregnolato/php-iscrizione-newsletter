@@ -1,4 +1,18 @@
-<?php ?>
+<?php 
+
+
+if (isset($_POST["emails"])) {
+    $user_email = $_POST["emails"];
+    // var_dump($user_email);
+    // controllo se nella email sono presenti ".@"
+    if (str_contains($user_email, '.') && str_contains($user_email, '@')) {
+        $valid = "Email valida";
+    } else {
+        $error = "Email non valida";
+    }
+}
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -17,11 +31,24 @@
     <div class="container m-5">
         <div class="row">
             <div class="col-5">
+                <!-- stampa del controllo dell'inserimento della email -->
+                <?php if (isset($valid)) { ?>
+                <div class="alert alert-success">
+                    <?php echo $valid; ?>
+                </div>
+                <?php } ?>
+
+                <?php if (isset($error)) { ?>
+                <div class="alert alert-danger">
+                    <?php echo $error; ?>
+                </div>
+                <?php } ?>
+                <!-- /stampa del controllo dell'inserimento della email -->
                 <!-- form -->
-                <form method="POST">
+                <form action="" method="POST">
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <label for="emails" class="form-label">Inserisci la tua email</label>
+                        <input type="text" class="form-control" id="emails" aria-describedby="emailHelp" name="emails">
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
