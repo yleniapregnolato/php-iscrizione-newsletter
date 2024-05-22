@@ -50,7 +50,7 @@ if (isset($_POST["emails"])) {
                         <label for="emails" class="form-label">Inserisci la tua email</label>
                         <input type="text" class="form-control" id="emails" aria-describedby="emailHelp" name="emails">
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary">INVIA</button>
                 </form>
                 <!-- /form -->
             </div>

@@ -1,5 +1,5 @@
 ### Milestone 1 (creazione del form)
-Creare un file index.php contenente un form HTML con un campo di input per l'inserimento dell'indirizzo email.
+- [x] Creare un file index.php contenente un form HTML con un campo di input per l'inserimento dell'indirizzo email.
 Implementare la logica di controllo dell'email direttamente in index.php.
 Mostrare il risultato della validazione sulla stessa pagina.
 ### Milestone 2 (functions.php)
