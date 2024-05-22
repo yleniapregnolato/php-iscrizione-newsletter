@@ -1,16 +1,6 @@
 <?php 
 
-
-if (isset($_POST["emails"])) {
-    $user_email = $_POST["emails"];
-    // var_dump($user_email);
-    // controllo se nella email sono presenti ".@"
-    if (str_contains($user_email, '.') && str_contains($user_email, '@')) {
-        $valid = "Email valida";
-    } else {
-        $error = "Email non valida";
-    }
-}
+include_once __DIR__ . "/partials/function.php";
 
 ?>
 
@@ -27,7 +17,6 @@ if (isset($_POST["emails"])) {
 </head>
 
 <body>
-
     <div class="container m-5">
         <div class="row">
             <div class="col-5">
