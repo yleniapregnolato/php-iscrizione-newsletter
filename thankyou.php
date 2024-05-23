@@ -13,6 +13,6 @@ echo $_SESSION["correct"];
     <title>Document</title>
 </head>
 <body>
-    <h1>Grazie per aver inserito correttamente l'email</h1>
+    <h1>Grazie per esserti iscritto</h1>
 </body>
 </html>
